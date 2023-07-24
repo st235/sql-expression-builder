@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const chai_1 = require("chai");
 const sql_types_1 = require("../src/sql_types");
-describe('Types tests', () => {
+describe('SqlTypes tests', () => {
     it('SqlBoolean should return BOOL as a raw expression.', () => {
         const sqlBoolean = new sql_types_1.SqlBoolean();
         chai_1.assert.equal(sqlBoolean.getRawExpression(), 'BOOL');

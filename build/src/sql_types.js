@@ -54,10 +54,10 @@ exports.SqlDecimal = SqlDecimal;
 class SqlVarchar {
     constructor(length) {
         (0, asserts_1.assert)(length > 0, `Length should be positive but got ${length}`);
-        this.length = length;
+        this._length = length;
     }
     getRawExpression() {
-        return `VARCHAR(${this.length})`;
+        return `VARCHAR(${this._length})`;
     }
 }
 exports.SqlVarchar = SqlVarchar;

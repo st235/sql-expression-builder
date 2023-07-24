@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { SqlBoolean, SqlInteger, SqlFloat, SqlDouble, SqlDecimal, SqlVarchar, SqlDate } from '../src/sql_types';
 
-describe('Types tests', () => {
+describe('SqlTypes tests', () => {
 
     it('SqlBoolean should return BOOL as a raw expression.', () => {
         const sqlBoolean = new SqlBoolean();

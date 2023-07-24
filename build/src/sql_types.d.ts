@@ -39,7 +39,7 @@ declare class SqlDecimal implements SqlType {
  * Declares an sql string data type.
  */
 declare class SqlVarchar implements SqlType {
-    readonly length: number;
+    private readonly _length;
     constructor(length: number);
     getRawExpression(): string;
 }
