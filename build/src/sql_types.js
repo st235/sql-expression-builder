@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SqlDate = exports.SqlVarchar = exports.SqlDecimal = exports.SqlDouble = exports.SqlFloat = exports.SqlInteger = exports.SqlBoolean = void 0;
+const asserts_1 = require("./utils/asserts");
 ;
 /**
  * Declares an sql boolean data type.
@@ -52,6 +53,7 @@ exports.SqlDecimal = SqlDecimal;
  */
 class SqlVarchar {
     constructor(length) {
+        (0, asserts_1.assert)(length > 0, `Length should be positive but got ${length}`);
         this.length = length;
     }
     getRawExpression() {

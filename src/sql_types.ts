@@ -1,3 +1,4 @@
+import { assert } from './utils/asserts';
 import { SqlExpression } from './sql_expression';
 
 /**
@@ -70,6 +71,7 @@ class SqlVarchar implements SqlType {
     readonly length: number;
 
     constructor(length: number) {
+        assert(length > 0, `Length should be positive but got ${length}`);
         this.length = length;
     }
 
