@@ -68,15 +68,15 @@ class SqlDecimal implements SqlType {
  */
 class SqlVarchar implements SqlType {
 
-    readonly length: number;
+    private readonly _length: number;
 
     constructor(length: number) {
         assert(length > 0, `Length should be positive but got ${length}`);
-        this.length = length;
+        this._length = length;
     }
 
     getRawExpression(): string {
-        return `VARCHAR(${this.length})`;
+        return `VARCHAR(${this._length})`;
     }
 
 }
