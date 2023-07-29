@@ -27,6 +27,10 @@ class SqlColumn implements SqlExpression {
         this._type = type;
     }
 
+    getName(): string {
+        return this._name;
+    }
+
     setIsOptional(isOptional: boolean) {
         this._isOptional = isOptional;
     }

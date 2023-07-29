@@ -20,6 +20,9 @@ class SqlColumn {
         this._name = name;
         this._type = type;
     }
+    getName() {
+        return this._name;
+    }
     setIsOptional(isOptional) {
         this._isOptional = isOptional;
     }

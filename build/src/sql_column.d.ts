@@ -15,6 +15,7 @@ declare class SqlColumn implements SqlExpression {
     private _isPrimaryKey;
     private _isUnique;
     constructor(name: string, type: SqlType);
+    getName(): string;
     setIsOptional(isOptional: boolean): void;
     setDefaultExpression(defaultExpression: SqlExpression): void;
     setIsAutoIncrement(isAutoincrement: boolean): void;
